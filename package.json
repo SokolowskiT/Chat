@@ -1,0 +1,23 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SokolowskiT/Chat.git"
+  },
+  "author": "Tomasz Sokolowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SokolowskiT/Chat/issues"
+  },
+  "homepage": "https://github.com/SokolowskiT/Chat#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
