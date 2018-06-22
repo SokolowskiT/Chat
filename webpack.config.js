@@ -24,7 +24,9 @@ function getPlugins() {
 				sourceMap: false
 			})
 		);
-	}
+	} else {
+    plugins.push(new webpack.HotModuleReplacementPlugin());
+  }
 
 	return plugins;
 }
@@ -63,6 +65,14 @@ module.exports = {
 			}
 		]
 	},
-
+  devtool: 'cheap-module-eval-source-map',
+  devServer: {
+    proxy: {
+      '/socket.io': {
+        target: 'http://localhost:3000',
+        ws: true,
+      },
+    },
+  },
 	plugins: getPlugins()
 };
